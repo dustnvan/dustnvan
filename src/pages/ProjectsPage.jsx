@@ -4,7 +4,7 @@ import usaNails from '../assets/images/usa-nails.png';
 import microsoftClone from '../assets/images/microsoft-clone.png';
 import spaceXClone from '../assets/images/spaceX-clone.png';
 import portfolio from '../assets/images/portfolio.png';
-
+import { useRef } from 'react';
 const ProjectsPage = () => {
   const projects = [
     {
@@ -37,6 +37,7 @@ const ProjectsPage = () => {
     },
   ];
 
+  const scrollRef = useRef(null);
   return (
     // make h-screen when add new section
     <section className="pt-10 xl:h-screen">
@@ -45,7 +46,7 @@ const ProjectsPage = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        transition={{ duration: 1, delay: 0.2 }}
+        transition={{ duration: 1 }}
       >
         <h1 className="text-uranian-blue text-5xl  relative inline-block z-10">
           <span className="z-10 relative font-bold">Projects</span>
@@ -53,7 +54,10 @@ const ProjectsPage = () => {
         </h1>
       </motion.div>
 
-      <div className="flex gap-5 overflow-x-auto overflow-y-hidden flex-nowrap scrollbar-thin scrollbar-thumb-uranian-blue scrollbar-track-black pb-5">
+      <div
+        ref={scrollRef}
+        className="flex gap-5 overflow-x-auto overflow-y-hidden flex-nowrap scrollbar-thin scrollbar-thumb-uranian-blue scrollbar-track-black pb-5"
+      >
         {projects.map((project, index) => (
           <Project
             key={index}
@@ -63,6 +67,7 @@ const ProjectsPage = () => {
             link={project.link}
             techStack={project.techStack}
             image={project.image}
+            scrollRef={scrollRef}
           />
         ))}
       </div>

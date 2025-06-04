@@ -2,15 +2,23 @@ import { motion } from 'motion/react';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const Project = ({ name, description, link, number, techStack, image }) => {
+const Project = ({
+  name,
+  description,
+  link,
+  number,
+  techStack,
+  image,
+  scrollRef,
+}) => {
   return (
     <a href={link} target="_blank">
       <motion.div
         className="cursor-pointer rounded-xl p-2 hover:bg-air-blue/20 transition duration-300 group flex flex-col w-80 h-110"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1, delay: 0.5 }}
+        viewport={{ once: true, viewport: scrollRef }}
+        transition={{ duration: 1 }}
       >
         <img src={image} />
         <h1 className="text-2xl font-semibold text-melon mt-4">
