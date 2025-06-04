@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import 'tailwindcss';
+@plugin 'tailwind-scrollbar';
+@theme {
+  --color-uranian-blue: #a9cef4;
+  --color-air-blue: #7ea0b7;
+  --color-melon: #efb0a1;
+}
+
+@layer base {
+  body {
+    @apply bg-black;
+    font-family: 'inter', sans-serif;
+  }
+}
+
+@layer utilities {
+}
+
+@custom-variant hover (&:hover);
