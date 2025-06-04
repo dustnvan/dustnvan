@@ -14,13 +14,12 @@ const Project = ({
   return (
     <a href={link} target="_blank">
       <motion.div
-        className="cursor-pointer rounded-xl p-2 hover:bg-air-blue/20 transition duration-300 group flex flex-col w-80 h-110"
+        className="cursor-pointer rounded-xl p-2 hover:bg-air-blue/20  group flex flex-col w-80 h-110"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        // viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 1 }}
       >
-        <img src={image} loading="lazy" className="w-full h-auto" />
+        <img src={image} />
         <h1 className="text-2xl font-semibold text-melon mt-4">
           {String(number).padStart(2, '0')} {name}
         </h1>
