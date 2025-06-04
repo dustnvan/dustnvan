@@ -1,6 +1,6 @@
 👋 Hi, I'm Dustin Van!
 
-🚀 Full-Stack Web Developer
+🚀 Full-Stack Developer
 
 🎮 Hobbyist Game Developer
 
