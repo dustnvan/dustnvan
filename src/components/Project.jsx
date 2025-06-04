@@ -17,7 +17,7 @@ const Project = ({
         className="cursor-pointer rounded-xl p-2 hover:bg-air-blue/20 transition duration-300 group flex flex-col w-80 h-110"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        viewport={{ once: true, viewport: scrollRef }}
+        viewport={{ root: scrollRef }}
         transition={{ duration: 1 }}
       >
         <img src={image} />
