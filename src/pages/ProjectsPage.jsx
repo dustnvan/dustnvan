@@ -4,6 +4,7 @@ import usaNails from '../assets/images/usa-nails.png';
 import microsoftClone from '../assets/images/microsoft-clone.png';
 import spaceXClone from '../assets/images/spaceX-clone.png';
 import portfolio from '../assets/images/portfolio.png';
+import elevateCode from '../assets/images/elevate-code.png';
 import { useRef } from 'react';
 const ProjectsPage = () => {
   const projects = [
@@ -13,6 +14,13 @@ const ProjectsPage = () => {
       link: '',
       techStack: ['React', 'Tailwind'],
       image: portfolio,
+    },
+    {
+      name: 'ElevateCode',
+      description: 'Home landing page for a software consulting company',
+      link: 'https://elevate-code.vercel.app/',
+      techStack: ['React', 'Tailwind'],
+      image: elevateCode,
     },
     {
       name: 'USA Nails',
