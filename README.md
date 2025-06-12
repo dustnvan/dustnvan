@@ -1,1 +1,1 @@
-[Live Website](https://vercel.com/dustnvans-projects?repo=https://github.com/dustnvan/dustnvan)
+[Live Website](https://dustnvan.vercel.app/)
